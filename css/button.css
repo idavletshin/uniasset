@@ -1,0 +1,52 @@
+/* Общие стили для кнопки */
+
+.btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
+
+.btn img {
+  margin-right: calc(1rem + (32 - 16) * ((100vw - 20rem) / 1410-320));
+}
+
+button:disabled.button,
+button[disabled].button {
+  background-color: var(--card-bg);
+}
+
+/* *** */
+
+/* Цвет для кнопок */
+
+.--blue {
+  background: var(--blue);
+}
+
+.--blue:hover {
+  background: var(--light-blue);
+  transition: background 0.3s ease 0s;
+}
+
+.--blue:active {
+  background: var(--blue);
+}
+
+/* *** */
+
+/* Стили для кнопки download */
+
+.btn-download {
+  max-width: max-content;
+  padding: calc(1rem + (20 - 16) * ((100vw - 20rem) / 1410-320))
+    calc(1.5rem + (32 - 24) * ((100vw - 20rem) / 1410-320));
+  color: var(--white);
+  font-size: calc(1rem + (20 - 16) * ((100vw - 20rem) / 1410-320));
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+}
