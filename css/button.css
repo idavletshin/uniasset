@@ -11,7 +11,7 @@
 }
 
 .btn img {
-  margin-right: calc(1rem + (32 - 16) * ((100vw - 20rem) / 1410-320));
+  margin-right: calc(1rem + 16 * ((100vw - 20rem) / 1090));
 }
 
 button:disabled.button,
@@ -42,10 +42,10 @@ button[disabled].button {
 
 .btn-download {
   max-width: max-content;
-  padding: calc(1rem + (20 - 16) * ((100vw - 20rem) / 1410-320))
-    calc(1.5rem + (32 - 24) * ((100vw - 20rem) / 1410-320));
+  padding: calc(1rem + 4 * ((100vw - 20rem) / 1090))
+    calc(1.5rem + 8 * ((100vw - 20rem) / 1090));
   color: var(--white);
-  font-size: calc(1rem + (20 - 16) * ((100vw - 20rem) / 1410-320));
+  font-size: calc(1rem + 4 * ((100vw - 20rem) / 1090));
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 0.5rem;

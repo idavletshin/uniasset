@@ -1,5 +1,5 @@
 const burger = document.querySelector(".burger");
-const headerMenuList = document.querySelector(".header .menu__list");
+const headerMenuList = document.querySelector(".header .menu__list-wrap");
 const body = document.querySelector("body")
 
 // window.addEventListener("load", function () {
