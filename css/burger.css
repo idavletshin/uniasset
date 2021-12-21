@@ -67,7 +67,7 @@
     transform 0.15s 0.15s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-@media screen and (max-width: 47.9375rem) {
+@media screen and (max-width: 48rem) {
   .burger {
     display: block;
   }

@@ -31,7 +31,7 @@ body {
 
 @media screen and (max-width: 88.125rem) {
   .container {
-    padding: 0 calc(0.9375rem + 20 * ((100vw - 20rem) / 1090));
+    padding: 0 calc(15px + 20 * ((100vw - 20rem) / 1090));
   }
 }
 
@@ -48,7 +48,7 @@ body {
 
 @media screen and (max-width: 88.125rem) {
   .header {
-    margin: calc(0.9375rem + 25 * ((100vw - 20rem) / 1090)) 0;
+    margin: calc(15px + 25 * ((100vw - 20rem) / 1090)) 0;
   }
 }
 
@@ -77,11 +77,11 @@ body {
 
 @media screen and (max-width: 88.125rem) {
   .logo-img {
-    max-width: calc(2.5rem + 24 * ((100vw - 20rem) / 1090));
+    max-width: calc(40px + 24 * ((100vw - 20rem) / 1090));
   }
 
   .logo-text {
-    font-size: calc(0.9375rem + 9 * ((100vw - 20rem) / 1090));
+    font-size: calc(15px + 9 * ((100vw - 20rem) / 1090));
   }
 }
 
@@ -144,20 +144,20 @@ body {
 
 @media screen and (max-width: 88.125rem) {
   .menu__list {
-    font-size: calc(0.875rem + 2 * ((100vw - 20rem) / 1090));
+    font-size: calc(14px + 2 * ((100vw - 20rem) / 1090));
   }
 
   .header .menu__item:not(:last-child) {
-    margin-left: calc(0.625rem + 30 * ((100vw - 20rem) / 1090));
+    margin-left: calc(10px + 30 * ((100vw - 20rem) / 1090));
   }
 
   .lang {
-    margin-left: calc(1.25rem + 60 * ((100vw - 20rem) / 1090));
-    font-size: calc(0.875rem + 4 * ((100vw - 20rem) / 1090));
+    margin-left: calc(20px + 60 * ((100vw - 20rem) / 1090));
+    font-size: calc(14px + 4 * ((100vw - 20rem) / 1090));
   }
 }
 
-@media screen and (max-width: 47.9375rem) {
+@media screen and (max-width: 48rem) {
   .header .menu__list-wrap {
     position: fixed;
     top: 0%;
@@ -179,21 +179,21 @@ body {
     overflow: scroll;
   }
 
-  .menu__list-wrap.active {
+  .header .menu__list-wrap.active {
     left: 0;
     opacity: 1;
   }
 
-  .menu__list .menu__item {
+  .header .menu__list .menu__item {
     margin: 0;
     padding: 1rem 0;
   }
 
-  .menu__list .menu__item:first-child {
+  .header .menu__list .menu__item:first-child {
     margin-top: auto;
   }
 
-  .menu__list .menu__item:last-child {
+  .header .menu__list .menu__item:last-child {
     margin-bottom: auto;
   }
 }
@@ -208,8 +208,8 @@ body {
 
 @media screen and (max-width: 88.125rem) {
   .main {
-    margin-top: calc(2.5rem + 40 * ((100vw - 20rem) / 1090));
-    margin-bottom: calc(5rem + 80 * ((100vw - 20rem) / 1090));
+    margin-top: calc(40px + 40 * ((100vw - 20rem) / 1090));
+    margin-bottom: calc(80px + 80 * ((100vw - 20rem) / 1090));
   }
 }
 
@@ -244,21 +244,21 @@ body {
 
 @media screen and (max-width: 88.125rem) {
   .brand {
-    margin-bottom: calc(3.75rem + 120 * ((100vw - 20rem) / 1090));
+    margin-bottom: calc(60px + 120 * ((100vw - 20rem) / 1090));
   }
 
   .brand__title {
-    margin-bottom: calc(1rem + 16 * ((100vw - 20rem) / 1090));
-    font-size: calc(2.5rem + 42 * ((100vw - 20rem) / 1090));
+    margin-bottom: calc(16px + 16 * ((100vw - 20rem) / 1090));
+    font-size: calc(40px + 42 * ((100vw - 20rem) / 1090));
   }
 
   .brand__text {
-    margin-bottom: calc(1.5rem + 40 * ((100vw - 20rem) / 1090));
-    font-size: calc(1.125rem + 10 * ((100vw - 20rem) / 1090));
+    margin-bottom: calc(24px + 40 * ((100vw - 20rem) / 1090));
+    font-size: calc(18px + 10 * ((100vw - 20rem) / 1090));
   }
 }
 
-@media screen and (max-width: 47.9375rem) {
+@media screen and (max-width: 48rem) {
   .brand {
     flex-direction: column-reverse;
   }
@@ -269,7 +269,7 @@ body {
   }
 
   .brand__right {
-    margin-bottom: calc(1.5rem + 40 * ((100vw - 20rem) / 1090));
+    margin-bottom: calc(24px + 40 * ((100vw - 20rem) / 1090));
   }
 }
 
@@ -287,9 +287,17 @@ body {
 .cards {
   position: relative;
   height: 30.625rem;
-  width: min-content;
+  /* width: min-content; */
+  width: 100%;
   margin-left: 8rem;
-  animation: show 3s;
+  -webkit-animation-name: show;
+  -moz-animation-name: show;
+  -ms-animation-name: show;
+  animation-name: show;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  animation-duration: 3s;
 }
 
 @keyframes show {
@@ -323,14 +331,32 @@ body {
 }
 
 .cards__layer_five {
+  -webkit-animation-name: runLayerFive;
+  -moz-animation-name: runLayerFive;
+  -ms-animation-name: runLayerFive;
   animation-name: runLayerFive;
-  animation-delay: 1s;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
   z-index: 1;
 }
 
-@-webkit-keyframes runLayerFive {
+.cards__layer_one,
+.cards__layer_three,
+.cards__layer_four,
+.cards__layer_five {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes runLayerFive {
   from {
     left: 0;
   }
@@ -345,9 +371,6 @@ body {
   width: 21.25rem;
   height: 27.5rem;
   border-radius: 1rem;
-  animation-delay: 1s;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
 }
 
 .cards__layer_one {
@@ -358,11 +381,14 @@ body {
     rgba(255, 226, 89, 1) 0%,
     rgba(255, 167, 81, 1) 100%
   );
+  -webkit-animation-name: runLayerOne;
+  -moz-animation-name: runLayerOne;
+  -ms-animation-name: runLayerOne;
   animation-name: runLayerOne;
   z-index: 5;
 }
 
-@-webkit-keyframes runLayerOne {
+@keyframes runLayerOne {
   from {
     left: 0;
     width: 21.25rem;
@@ -383,11 +409,14 @@ body {
     rgba(131, 68, 175, 1) 0%,
     rgba(186, 119, 255, 1) 100%
   );
+  -webkit-animation-name: runLayerThree;
+  -moz-animation-name: runLayerThree;
+  -ms-animation-name: runLayerThree;
   animation-name: runLayerThree;
   z-index: 3;
 }
 
-@-webkit-keyframes runLayerThree {
+@keyframes runLayerThree {
   from {
     left: 0;
     bottom: 3.125rem;
@@ -409,11 +438,14 @@ body {
     rgba(26, 41, 128, 1) 0%,
     rgba(38, 208, 206, 1) 100%
   );
+  -webkit-animation-name: runLayerFour;
+  -moz-animation-name: runLayerFour;
+  -ms-animation-name: runLayerFour;
   animation-name: runLayerFour;
   z-index: 2;
 }
 
-@-webkit-keyframes runLayerFour {
+@keyframes runLayerFour {
   from {
     left: 0;
     bottom: 3.125rem;
@@ -430,79 +462,79 @@ body {
 
 @media screen and (max-width: 88.125rem) {
   .cards {
-    height: calc(15.3125rem + 245 * ((100vw - 20rem) / 1090));
-    margin-left: calc(0rem + 128 * ((100vw - 20rem) / 1090));
+    height: calc(245px + 245 * ((100vw - 20rem) / 1090));
+    margin-left: calc(0px + 128 * ((100vw - 20rem) / 1090));
   }
 
   .cards__layer {
-    bottom: calc(1.5625rem + 25 * ((100vw - 20rem) / 1090));
-    border-radius: calc(1rem + 16 * ((100vw - 20rem) / 1090));
+    bottom: calc(25px + 25 * ((100vw - 20rem) / 1090));
+    border-radius: calc(16px + 16 * ((100vw - 20rem) / 1090));
   }
 
   .cards__layer_two,
   .cards__layer_five {
-    width: calc(10.625rem + 170 * ((100vw - 20rem) / 1090));
-    height: calc(13.75rem + 220 * ((100vw - 20rem) / 1090));
+    width: calc(170px + 170 * ((100vw - 20rem) / 1090));
+    height: calc(220px + 220 * ((100vw - 20rem) / 1090));
   }
 
-  @-webkit-keyframes runLayerFive {
+  @keyframes runLayerFive {
     from {
       left: 0;
     }
     to {
-      left: calc(2.25rem + 36 * ((100vw - 20rem) / 1090));
+      left: calc(36px + 36 * ((100vw - 20rem) / 1090));
     }
   }
 
   .cards__layer_one,
   .cards__layer_three,
   .cards__layer_four {
-    width: calc(10.625rem + 170 * ((100vw - 20rem) / 1090));
-    height: calc(13.75rem + 220 * ((100vw - 20rem) / 1090));
+    width: calc(170px + 170 * ((100vw - 20rem) / 1090));
+    height: calc(220px + 220 * ((100vw - 20rem) / 1090));
   }
 
-  @-webkit-keyframes runLayerOne {
+  @keyframes runLayerOne {
     from {
-      width: calc(10.625rem + 170 * ((100vw - 20rem) / 1090));
-      height: calc(13.75rem + 220 * ((100vw - 20rem) / 1090));
+      width: calc(170px + 170 * ((100vw - 20rem) / 1090));
+      height: calc(220px + 220 * ((100vw - 20rem) / 1090));
     }
     to {
-      bottom: calc(2.25rem + 36 * ((100vw - 20rem) / 1090));
-      width: calc(6.125rem + 98 * ((100vw - 20rem) / 1090));
-      height: calc(8.25rem + 132 * ((100vw - 20rem) / 1090));
-    }
-  }
-
-  @-webkit-keyframes runLayerThree {
-    from {
-      bottom: calc(1.5625rem + 25 * ((100vw - 20rem) / 1090));
-      width: calc(10.625rem + 170 * ((100vw - 20rem) / 1090));
-      height: calc(13.75rem + 220 * ((100vw - 20rem) / 1090));
-    }
-    to {
-      left: calc(3rem + 48 * ((100vw - 20rem) / 1090));
-      bottom: calc(4.5rem + 72 * ((100vw - 20rem) / 1090));
-      width: calc(6.125rem + 98 * ((100vw - 20rem) / 1090));
-      height: calc(8.25rem + 132 * ((100vw - 20rem) / 1090));
+      bottom: calc(36px + 36 * ((100vw - 20rem) / 1090));
+      width: calc(98px + 98 * ((100vw - 20rem) / 1090));
+      height: calc(132px + 132 * ((100vw - 20rem) / 1090));
     }
   }
 
-  @-webkit-keyframes runLayerFour {
+  @keyframes runLayerThree {
     from {
-      bottom: calc(1.5625rem + 25 * ((100vw - 20rem) / 1090));
-      width: calc(10.625rem + 170 * ((100vw - 20rem) / 1090));
-      height: calc(13.75rem + 220 * ((100vw - 20rem) / 1090));
+      bottom: calc(25px + 25 * ((100vw - 20rem) / 1090));
+      width: calc(170px + 170 * ((100vw - 20rem) / 1090));
+      height: calc(220px + 220 * ((100vw - 20rem) / 1090));
     }
     to {
-      left: calc(6rem + 96 * ((100vw - 20rem) / 1090));
-      bottom: calc(7rem + 112 * ((100vw - 20rem) / 1090));
-      width: calc(6.125rem + 98 * ((100vw - 20rem) / 1090));
-      height: calc(8.25rem + 132 * ((100vw - 20rem) / 1090));
+      left: calc(48px + 48 * ((100vw - 20rem) / 1090));
+      bottom: calc(72px + 72 * ((100vw - 20rem) / 1090));
+      width: calc(98px + 98 * ((100vw - 20rem) / 1090));
+      height: calc(132px + 132 * ((100vw - 20rem) / 1090));
+    }
+  }
+
+  @keyframes runLayerFour {
+    from {
+      bottom: calc(25px + 25 * ((100vw - 20rem) / 1090));
+      width: calc(170px + 170 * ((100vw - 20rem) / 1090));
+      height: calc(220px + 220 * ((100vw - 20rem) / 1090));
+    }
+    to {
+      left: calc(96px + 96 * ((100vw - 20rem) / 1090));
+      bottom: calc(112px + 112 * ((100vw - 20rem) / 1090));
+      width: calc(98px + 98 * ((100vw - 20rem) / 1090));
+      height: calc(132px + 132 * ((100vw - 20rem) / 1090));
     }
   }
 }
 
-@media screen and (max-width: 47.9375rem) {
+@media screen and (max-width: 48rem) {
   .cards {
     /* margin-left: calc(3.1875rem + 153 * ((100vw - 20rem) / 320-320)); */
     left: 16%;
@@ -576,30 +608,29 @@ body {
 
 @media screen and (max-width: 88.125rem) {
   .advantage-item {
-    margin-bottom: calc(5.75rem + 118 * ((100vw - 20rem) / 1090));
+    margin-bottom: calc(92px + 118 * ((100vw - 20rem) / 1090));
   }
 
   .advantage-item::after {
-    font-size: calc(15rem + 300 * ((100vw - 20rem) / 1090));
-    text-shadow: 0 calc(1.125rem + 18 * ((100vw - 20rem) / 1090))
-      var(--black-main);
+    font-size: calc(240px + 300 * ((100vw - 20rem) / 1090));
+    text-shadow: 0 calc(18px + 18 * ((100vw - 20rem) / 1090)) var(--black-main);
   }
 
   .advantage-item:not(:last-child) {
-    margin-right: calc(1.875rem + 10 * ((100vw - 20rem) / 1090));
+    margin-right: calc(30px + 10 * ((100vw - 20rem) / 1090));
   }
 
   .advantage-item__title {
-    margin-bottom: calc(1.75rem + 28 * ((100vw - 20rem) / 1090));
-    font-size: calc(1.875rem + 30 * ((100vw - 20rem) / 1090));
+    margin-bottom: calc(28px + 28 * ((100vw - 20rem) / 1090));
+    font-size: calc(30px + 30 * ((100vw - 20rem) / 1090));
   }
 
   .advantage-item__text {
-    font-size: calc(1rem + 2 * ((100vw - 20rem) / 1090));
+    font-size: calc(16px + 2 * ((100vw - 20rem) / 1090));
   }
 }
 
-@media screen and (max-width: 47.9375rem) {
+@media screen and (max-width: 48rem) {
   .advantages__items {
     flex-direction: column;
   }
@@ -637,19 +668,19 @@ body {
 
 @media screen and (max-width: 88.125rem) {
   .footer {
-    margin-bottom: calc(0.9375rem + 25 * ((100vw - 20rem) / 1090));
+    margin-bottom: calc(15px + 25 * ((100vw - 20rem) / 1090));
   }
 
   .footer .menu__item {
-    margin-left: calc(0.625rem + 30 * ((100vw - 20rem) / 1090));
+    margin-left: calc(10px + 30 * ((100vw - 20rem) / 1090));
   }
 
   .footer__copyright {
-    font-size: calc(0.875rem + 2 * ((100vw - 20rem) / 1090));
+    font-size: calc(14px + 2 * ((100vw - 20rem) / 1090));
   }
 }
 
-@media screen and (max-width: 47.9375rem) {
+@media screen and (max-width: 48rem) {
   .footer {
     flex-direction: column-reverse;
   }
@@ -658,12 +689,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: calc(1rem + 16 * ((100vw - 20rem) / 1090));
+    margin-bottom: calc(16px + 16 * ((100vw - 20rem) / 1090));
   }
 
   .footer .menu__item {
     margin: 0;
-    margin-bottom: calc(1rem + 16 * ((100vw - 20rem) / 1090));
+    margin-bottom: calc(16px + 16 * ((100vw - 20rem) / 1090));
   }
 }
 
