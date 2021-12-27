@@ -14,6 +14,9 @@ body {
   font-family: var(--main-font);
   font-weight: 500;
   background-color: var(--black-bg);
+}
+
+body {
   overflow-x: hidden;
 }
 

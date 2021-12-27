@@ -11,7 +11,7 @@
 }
 
 .btn img {
-  margin-right: calc(16px + 16 * ((100vw - 20rem) / 1090));
+  margin-right: 32px;
 }
 
 button:disabled.button,
@@ -42,11 +42,22 @@ button[disabled].button {
 
 .btn-download {
   max-width: max-content;
-  padding: calc(16px + 4 * ((100vw - 20rem) / 1090))
-    calc(1.5rem + 8 * ((100vw - 20rem) / 1090));
+  padding: 20px 32px;
   color: var(--white);
-  font-size: calc(16px + 4 * ((100vw - 20rem) / 1090));
+  font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 88.125rem) {
+  .btn img {
+    margin-right: calc(16px + 16 * ((100vw - 20rem) / 1090));
+  }
+
+  .btn-download {
+    padding: calc(16px + 4 * ((100vw - 20rem) / 1090))
+      calc(24px + 8 * ((100vw - 20rem) / 1090));
+    font-size: calc(16px + 4 * ((100vw - 20rem) / 1090));
+  }
 }
